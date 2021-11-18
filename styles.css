@@ -1,0 +1,351 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(255, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    padding-top: 10vh;
+    width: 100vw;
+}
+
+.santa {
+    align-content: flex-start;
+    align-items: start;
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    width: 25vh;
+}
+
+.santa__cap {
+    display: flex;
+    height: 60%;
+    flex-wrap: wrap;
+    justify-content: center;
+    left: 0;
+    margin-bottom: -5%;
+    position: absolute;
+    bottom: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.santa__cap__top {
+    height: 90%;
+    overflow: hidden;
+    position: relative;
+    width: 90%;
+}
+
+.santa__cap__top:after {
+    background-color: red;
+    border-radius: 45% 45% 0 0;
+    content: "";
+    display: block;
+    height: 200%;
+    overflow: hidden;
+}
+
+.santa__tail {
+    background-color: red;
+    border-radius: 0 100% 0 0;
+    height: 70%;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    transform: rotate(30deg);
+    width: 80%;
+    z-index: -1;
+}
+
+.santa__bombel {
+    background-color: white;
+    border-radius: 100%;
+    height: 50%;
+    position: absolute;
+    right: -5%;
+    top: 75%;
+    width: 15%;
+}
+
+.santa__cap__belt {
+    background-color: white;
+    border-radius: 5%/50%;
+    height: 50%;
+    position: relative;
+    width: 100%;
+}
+
+.santa__cap__belt:after {
+    background-color: white;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    bottom: 100%;
+    content: "";
+    display: block;
+    height: 30%;
+    left: 5%;
+    position: absolute;
+    width: 90%;
+}
+
+.santa__cap__belt:after {
+    background-color: #f6cfbc;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 30%;
+    left: 5%;
+    position: absolute;
+    width: 90%;
+}
+
+.santa__head {
+    display: flex;
+    height: 15%;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    width: 50%;
+    z-index: 2;
+}
+
+.santa__face {
+    align-content: flex-start;
+    background-color: #f6cfbc;
+    border-radius: 25% 25% 0 0 / 80% 80% 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.santa__eyes {
+    display: flex;
+    height: 20%;
+    justify-content: center;
+    margin: 20% 0 0;
+    width: 100%;
+}
+
+.santa__eye {
+    background-color: black;
+    border-radius: 100%;
+    height: 100%;
+    margin: 0 0.5vh;
+    position: relative;
+    width: 16%;
+}
+
+.santa__eye:after {
+    background-color: #fff;
+    border-radius: 100%;
+    bottom: 10%;
+    content: "";
+    display: block;
+    height: 30%;
+    position: absolute;
+    right: 20%;
+    width: 40%;
+}
+
+.santa__nose {
+    height: 25%;
+    background-color: #ff9d76;
+    border-radius: 70% 70% 50% 50% / 80% 80% 50% 50%;
+    width: 15%;
+}
+
+.santa__beard {
+    background-color: white;
+    border-radius: 50% 50% 50% 50% / 25% 25% 40% 40%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 80%;
+    width: 100%;
+}
+
+.santa__mouth {
+    background-color: black;
+    border-radius: 0 0 50% 50% / 0 0 60% 60%;
+    height: 20%;
+    margin: 10% auto 0;
+    overflow: hidden;
+    position: relative;
+    width: 30%;
+}
+
+.santa__tounge {
+    background-color: rgb(167, 79, 44);
+    border-radius: 50% 50% 0 0/ 60% 60% 0 0;
+    height: 50%;
+    margin: 10% auto 0;
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+}
+
+.santa__body {
+    height: 50%;
+    margin-bottom: -10%;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+.santa__torso {
+    background-color: red;
+    border-radius: 60% 60% 50% 50% / 90% 90% 15% 15%;
+    border-bottom: solid 2vh white;
+    height: 100%;
+    width: 100%;
+}
+
+.santa__arm {
+    background-color: red;
+    border-radius: 0 0 50% 50% / 0 0 15% 50%;
+    height: 20%;
+    position: absolute;
+    right: 50%;
+    top: 25%;
+    transform: rotate(25deg);
+    transition: transform 0.3s ease-out;
+    width: 80%;
+}
+
+.santa__arm--right {
+    left: 50%;
+    right: initial;
+    transform: rotate(-25deg) scaleX(-1);
+}
+
+.santa__wrist {
+    background-color: white;
+    height: 100%;
+    margin-top: -2%;
+    position: relative;
+    width: 10%;
+}
+
+.santa__hand {
+    background-color: red;
+    border-radius: 50% 0 0 50% / 50% 15% 15% 50%;
+    height: 65%;
+    position: absolute;
+    right: 100%;
+    top: 5%;
+    width: 20%;
+}
+
+.santa__finger {
+    background-color: red;
+    border-radius: 50% 50% 0 0 / 50% 50% 0 0;
+    bottom: 95%;
+    height: 45%;
+    position: absolute;
+    right: 0;
+    transform: rotate(-10deg);
+    width: 35%;
+}
+
+.santa__zip {
+    background-color: white;
+    height: 100%;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    width: 10%;
+}
+
+.santa__belt {
+    background-color: black;
+    bottom: 20%;
+    display: flex;
+    height: 10%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.santa__belt__clip {
+    background-color: black;
+    border: solid 0.5vh yellow;
+    height: 130%;
+    margin-top: -0.5vh;
+    position: relative;
+    width: 20%;
+}
+
+.santa__legs {
+    display: flex;
+    justify-content: center;
+    height: 35%;
+    width: 100%;
+}
+
+.santa__leg {
+    background-color: red;
+    height: 100%;
+    margin-right: 5%;
+    position: relative;
+    width: 25%;
+}
+
+.santa__leg--right {
+    transform: scaleX(-1);
+}
+
+.santa__leg:after {
+    background-color: red;
+    border-radius: 10% 0 0 50% / 50% 0 0 50%;
+    content: "";
+    display: block;
+    height: 100%;
+    left: -15%;
+    position: absolute;
+    top: 0;
+    transform: skewX(5deg);
+    width: 100%;
+}
+
+.santa__shoe {
+    background-color: grey;
+    height: 40%;
+    right: -2%;
+    position: absolute;
+    top: 80%;
+    width: 105%;
+    z-index: 1;
+}
+
+.santa__shoe:after {
+    background-color: black;
+    border-radius: 50% 50% 0 0 / 80% 80% 0 0;
+    content: "";
+    display: block;
+    height: 70%;
+    right: 0;
+    position: absolute;
+    bottom: 0;
+    width: 130%;
+}
+
+.santa:hover .santa__arm {
+    transform: rotate(0deg);
+}
+
+.santa:hover .santa__arm--right {
+    transform: scaleX(-1) rotate(0deg);
+}
